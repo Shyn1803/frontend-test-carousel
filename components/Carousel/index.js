@@ -1,17 +1,18 @@
 import React, { forwardRef } from 'react';
+import {CAROUSEL_SPEED, } from '@/utils/constants';
 import Slider from 'react-slick';
 
 // eslint-disable-next-line react/display-name
 const Carousel = forwardRef(
   (
-    { beforeChange, children, animated },
+    { beforeChange, children, animated, slidesToShowOnDesktop, slidesToShowOnMobile },
     ref
   ) => {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
-      slidesToShow: 5,
+      speed: CAROUSEL_SPEED,
+      slidesToShow: slidesToShowOnDesktop,
       centerMode: true,
       centerPadding: '0px',
       dots: false,
@@ -19,7 +20,7 @@ const Carousel = forwardRef(
         {
           breakpoint: 500,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: slidesToShowOnMobile,
             centerPadding: '0px',
           }
         }

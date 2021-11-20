@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import Carousel from '@/components/Carousel';
 import { fetcher } from 'utils/global';
 
@@ -41,6 +40,8 @@ export default function Home() {
           <Carousel
             ref={sliderRef}
             beforeChange={beforeChange}
+            slidesToShowOnDesktop={5}
+            slidesToShowOnMobile={1}
           >
             {data?.length > 0 && data?.map((item, index) => {
               return (
