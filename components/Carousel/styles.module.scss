@@ -1,0 +1,17 @@
+.carouselContainer {
+  :global {
+    .slick-slider {
+      .slick-arrow {
+        &.slick-next,
+        &.slick-prev {
+          &::before {
+            content: unset;
+          }
+        }
+      }
+    }
+    .animated {
+
+    }
+  }
+}

@@ -42,6 +42,7 @@ export default function Home() {
             beforeChange={beforeChange}
             slidesToShowOnDesktop={5}
             slidesToShowOnMobile={1}
+            animated
           >
             {data?.length > 0 && data?.map((item, index) => {
               return (

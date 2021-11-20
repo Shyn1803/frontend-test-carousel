@@ -10,35 +10,26 @@
 
     :global {
       .slick-slider {
-        .slick-arrow {
-
-          &.slick-next,
-          &.slick-prev {
-            &::before {
-              content: unset;
-            }
-          }
-        }
-
         .slick-slide {
-          text-align: center;
-
-          &.slick-center {
-            .item {
-              padding: 10px;
-            }
-          }
-
           .item {
             padding: 20px;
             height: 120px;
             transition: padding 0.3s ease;
-            ;
 
             .image {
               width: 100%;
               height: 100%;
               object-fit: cover;
+            }
+          }
+        }
+
+        &.animated {
+          .slick-slide {
+            &.slick-center {
+              .item {
+                padding: 10px;
+              }
             }
           }
         }

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import {CAROUSEL_SPEED, } from '@/utils/constants';
 import Slider from 'react-slick';
+import styles from './styles.module.scss';
 
 // eslint-disable-next-line react/display-name
 const Carousel = forwardRef(
@@ -77,7 +78,7 @@ const Carousel = forwardRef(
       if (beforeChange) beforeChange(oldIndex, newIndex);
     };
 
-    return (<div>
+    return (<div className={styles.carouselContainer}>
       <Slider
         ref={ref}
         className={`slider ${animated ? 'animated' : ''}`}
